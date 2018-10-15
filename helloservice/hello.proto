@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package twirp.example.hello;
+option go_package = "hello";
+
+// Welcomes for clients
+service Greeting {
+  // GetRandomGreeting greets you
+  rpc GetRandomGreeting(Arguments) returns (GreetingMessage);
+}
+
+message Arguments {}
+
+//Greeting on random language
+message GreetingMessage {
+  string greetings = 1;
+}
